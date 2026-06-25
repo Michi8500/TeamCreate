@@ -88,7 +88,7 @@ public class ResourcesUpdater:MonoBehaviour
                     Debug.Log(id);
                     string url = $"https://www.googleapis.com/drive/v3/files/{id}?alt=media&key={result}";
 
-                    Debug.Log("ダウンロード中...！");
+                    Debug.Log(url);
                     using (UnityWebRequest webRequest = UnityWebRequest.Get(url))
                     {
                         // リクエスト送信
@@ -157,7 +157,7 @@ public class ResourcesUpdater:MonoBehaviour
             }
         }
     }
-} 
+}  
 public static class GameInitializer
 {
     [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
